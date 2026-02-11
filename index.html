@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS DO PROJETO -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
     <!-- FONTAWESOME CDNJS -->
     <link
       rel="stylesheet"
@@ -13,9 +14,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <!-- JS DO PROJETO -->
     <script src="js/scripts.js" defer></script>
-    <!-- defer faz com que os arquivos carreguem após o html, sem que o scrip precise ficar depois do body -->
+    <!-- "defer" faz com que os arquivos carreguem após o html, sem que o scrip precise ficar depois do body -->
 
     <title>ToDo Avançado</title>
   </head>
@@ -24,7 +26,7 @@
       <header>
         <h1>ToDo Avançado</h1>
       </header>
-      <form class="todo-form">
+      <form id="todo-form">
         <p>Adicione sua tarefa:</p>
         <div class="form-control">
           <input
@@ -39,7 +41,7 @@
           </button>
         </div>
       </form>
-      <form id="edit-form">
+      <form id="edit-form" class="hide">
         <p>Edite sua tarefa:</p>
         <div class="form-control" id="edit-input">
           <input type="text" id="edit-input" />
@@ -50,49 +52,52 @@
         <button id="cancel-edit-btn">Cancelar</button>
       </form>
       <!-- vai ficar escondido, mas pra essa etapa temos que criar e é bom que fique visível -->
-      <div class="toolbar">
+      <div id="toolbar">
         <div id="search">
           <h4>Pesquisar:</h4>
           <form>
             <input type="text" id="search-input" placeholder="Buscar" />
             <!-- vai ser usado para fazer busca nas tarefas || nao tem submit pq o usuario vai digitar e ja vai sair buscando -->
             <button id="erase-button">
-                <i class="fa-solid fa-eraser"></i>
+              <i class="fa-solid fa-eraser"></i>
             </button>
             <!-- pra apagar o que o usuario digitou, limpa a buscar, sem a necessidade de limpar manualmente -->
           </form>
         </div>
         <div id="filter">
-            <h4>Filtrar:</h4>
-            <select id="filter-select">
-                <option value="all">Todos</option>
-                <option value="done">Feitas</option>
-                <option value="todo">A fazer</option>
-            </select>
+          <h4>Filtrar:</h4>
+          <select id="filter-select">
+            <option value="all">Todos</option>
+            <option value="done">Feitas</option>
+            <option value="todo">A fazer</option>
+          </select>
         </div>
       </div>
       <div id="todo-list">
+        <div class="todo done">
+          <h3>Estou fazendo alguma coisa...</h3>
+          <button class="edit-todo">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="finish-todo">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button class="remove-todo">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
         <div class="todo">
-            <h3>Estou fazendo alguma coisa...</h3>
-            <button class="edit-todo">
-                <i class="fa-solid fa-check"></i>
-            </button>
-            <button class="finish-todo">
-                <i class="fa-solid fa-pen"></i>
-            </button>
-            <button class="remove-todo">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <h3>Estudar JavaScript</h3>
-            <button class="edit-todo">
-                <i class="fa-solid fa-check"></i>
-            </button>
-            <button class="finish-todo">
-                <i class="fa-solid fa-pen"></i>
-            </button>
-            <button class="remove-todo">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
+          <h3>Estudar JavaScript</h3>
+          <button class="edit-todo">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="finish-todo">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button class="remove-todo">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </div>
       </div>
     </div>
