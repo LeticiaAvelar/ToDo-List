@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: Helvetica, Arial, sans-serif;
-    color: #333;
+    color: #193241;
     box-sizing: border-box;
 }
 
@@ -16,8 +16,8 @@ body {
 
 button {
     background-color: #FDFDFD;
-    color: #102f5e;
-    border: 2px solid #102f5e;
+    color: #1f4e5c;
+    border: 2px solid #1f4e5c;
     padding: .3rem .6rem;
     font-size: 1rem;
     cursor: pointer;
@@ -28,7 +28,7 @@ button {
 }
 
 button:hover {
-    background-color: #102f5e;
+    background-color: #1f4e5c;
     color: #FFF;
 }
 
@@ -37,7 +37,7 @@ button:hover i {
 }
 
 button i {
-    color: #102f5e;
+    color: #1f4e5c;
     font-weight: bold;
     pointer-events: none;
     /* o ícone está por cima do botão, então colocando isso, quando o usuário clicar no ícone, vai ser como se estivesse clicando no botão */
@@ -157,7 +157,7 @@ select {
 }
 
 .done {
-    background-color: #395169;
+    background-color: #379ab8;
 }
 
 .done h3 {
